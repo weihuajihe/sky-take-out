@@ -17,9 +17,7 @@ mybatis-plus:
   #mapper配置文件
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.sky.entity
-  configuration:
-    #开启驼峰命名
-    map-underscore-to-camel-case: true
+
   global-config:
     db-config:
       id-type: auto #主键策略自增长

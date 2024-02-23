@@ -86,12 +86,12 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee>
         //设置默认密码
         employee.setPassword(DigestUtils.md5DigestAsHex(PasswordConstant.DEFAULT_PASSWORD.getBytes()));
         //设置创建时间和修改事件
-        employee.setCreateTime(LocalDateTime.now());
-        employee.setUpdateTime(LocalDateTime.now());
-        //设置创建人和修改人的ID
-        //  interceptor拦截器中获得这次请求线程中的id  使用TheadLocal
-        employee.setCreateUser(BaseContext.getCurrentId());
-        employee.setUpdateUser(BaseContext.getCurrentId());
+        //employee.setCreateTime(LocalDateTime.now());
+        //employee.setUpdateTime(LocalDateTime.now());
+        ////设置创建人和修改人的ID
+        ////  interceptor拦截器中获得这次请求线程中的id  使用TheadLocal
+        //employee.setCreateUser(BaseContext.getCurrentId());
+        //employee.setUpdateUser(BaseContext.getCurrentId());
         int rows = employeeMapper.insert(employee);
         if(rows == 0){
             return Result.error("添加员工失败！");
@@ -145,9 +145,9 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee>
         //BeanUtils对象属性拷贝方法
         //DigestUtils数据库MD5加密
         BeanUtils.copyProperties(employeeDTO,employee);
-        employee.setUpdateTime(LocalDateTime.now());
-        //ThreadLocal
-        employee.setUpdateUser(BaseContext.getCurrentId());
+        //employee.setUpdateTime(LocalDateTime.now());
+        ////ThreadLocal
+        //employee.setUpdateUser(BaseContext.getCurrentId());
         int row = employeeMapper.updateById(employee);
         return Result.success();
     }
