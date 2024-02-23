@@ -8,13 +8,20 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Date;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @TableName dish
  */
 @TableName(value ="dish")
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Dish implements Serializable {
     private Long id;
 

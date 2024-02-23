@@ -7,13 +7,20 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Date;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @TableName user
  */
 @TableName(value ="user")
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class User implements Serializable {
     private Long id;
 

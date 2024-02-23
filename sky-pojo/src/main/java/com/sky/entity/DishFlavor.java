@@ -5,13 +5,20 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @TableName dish_flavor
  */
 @TableName(value ="dish_flavor")
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class DishFlavor implements Serializable {
     private Long id;
 

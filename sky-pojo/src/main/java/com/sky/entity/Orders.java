@@ -8,13 +8,20 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Date;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @TableName orders
  */
 @TableName(value ="orders")
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Orders implements Serializable {
     private Long id;
 

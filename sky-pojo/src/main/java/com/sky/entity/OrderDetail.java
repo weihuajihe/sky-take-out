@@ -6,13 +6,20 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.math.BigDecimal;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @TableName order_detail
  */
 @TableName(value ="order_detail")
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class OrderDetail implements Serializable {
     private Long id;
 
