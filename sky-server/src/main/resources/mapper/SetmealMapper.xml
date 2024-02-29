@@ -24,4 +24,24 @@
         image,create_time,update_time,
         create_user,update_user
     </sql>
+
+    <select id="pageQuery" resultType="com.sky.vo.SetmealVO">
+        SELECT s.*, c.name as categoryName
+        from setmeal s
+        left outer join category c
+        on s.category_id = c.id
+        <where>
+            <if test="setmealPageQueryDTO.name != null">
+                and s.name like concat("%",#{setmealPageQueryDTO.name},"%")
+            </if>
+            <if test="setmealPageQueryDTO.status != null">
+                and s.status = #{setmealPageQueryDTO.status}
+            </if>
+            <if test="setmealPageQueryDTO.categoryId != null">
+                and s.category_id = #{setmealPageQueryDTO.categoryId}
+            </if>
+
+        </where>
+        order by s.create_time desc
+    </select>
 </mapper>

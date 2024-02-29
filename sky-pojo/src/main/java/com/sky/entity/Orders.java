@@ -1,9 +1,7 @@
 package com.sky.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -31,9 +29,12 @@ public class Orders implements Serializable {
 
     private Long userId;
 
+
     private Long addressBookId;
 
+
     private LocalDateTime orderTime;
+
 
     private LocalDateTime checkoutTime;
 
@@ -57,7 +58,9 @@ public class Orders implements Serializable {
 
     private String rejectionReason;
 
+
     private LocalDateTime cancelTime;
+
 
     private LocalDateTime estimatedDeliveryTime;
 

@@ -2,8 +2,12 @@ package com.sky.mapper;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.sky.dto.SetmealPageQueryDTO;
 import com.sky.entity.Setmeal;
+import com.sky.vo.SetmealVO;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
 * @author jiangwb
@@ -14,6 +18,7 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface SetmealMapper extends BaseMapper<Setmeal> {
 
+    IPage pageQuery(IPage<SetmealVO> setmealVOPage,@Param("setmealPageQueryDTO") SetmealPageQueryDTO setmealPageQueryDTO);
 }
 
 

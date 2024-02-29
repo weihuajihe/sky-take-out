@@ -1,9 +1,7 @@
 package com.sky.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -41,6 +39,7 @@ public class ShoppingCart implements Serializable {
 
     private BigDecimal amount;
 
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
 
     private static final long serialVersionUID = 1L;
