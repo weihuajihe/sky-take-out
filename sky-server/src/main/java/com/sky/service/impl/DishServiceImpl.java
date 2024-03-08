@@ -21,6 +21,7 @@ import com.sky.vo.DishVO;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -49,6 +50,8 @@ public class DishServiceImpl extends ServiceImpl<DishMapper, Dish>
 
     @Autowired
     private CategoryMapper categoryMapper;
+
+
 
 
     @Override
@@ -172,6 +175,8 @@ public class DishServiceImpl extends ServiceImpl<DishMapper, Dish>
             dishVO.setFlavors(flavorList);
             dishVOArrayList.add(dishVO);
         });
+
+
         return dishVOArrayList;
 
     }
