@@ -48,6 +48,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
             //为新用户,自动注册
             user = User.builder()
                     .openid(openid)
+
                     .build();
             userMapper.insert(user);
 

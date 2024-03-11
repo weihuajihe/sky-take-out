@@ -33,6 +33,7 @@ public class Orders implements Serializable {
     private Long addressBookId;
 
 
+
     private LocalDateTime orderTime;
 
 
@@ -57,6 +58,7 @@ public class Orders implements Serializable {
     private String cancelReason;
 
     private String rejectionReason;
+
 
 
     private LocalDateTime cancelTime;
