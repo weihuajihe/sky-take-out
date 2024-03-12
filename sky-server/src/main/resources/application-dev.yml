@@ -8,8 +8,8 @@ sky:
     password: j129333wb
   alioss:
     endpoint: oss-cn-hangzhou.aliyuncs.com
-    access-key-id: LTAI5tKSdHJpLyU8eJpYhHdw
-    access-key-secret: eZV7HtrDB0f9fC4kw19JAbxAmyrmNU
+    access-key-id:
+    access-key-secret:
     bucket-name: sky-jiang
   redis:
     host: localhost
@@ -20,6 +20,6 @@ sky:
     appid: wx00cb65c3c80d555c
     secret: d466611052cd748052f0bfa980e19ad9
   baidu:
-    ak: zwTcodWulkI8Pyj3zEbl74G0BuaovKEZ
+    ak:
   shop:
     address: 安徽省合肥市蜀山区潜山路470号
