@@ -19,4 +19,7 @@ sky:
   wechat:
     appid: wx00cb65c3c80d555c
     secret: d466611052cd748052f0bfa980e19ad9
-
+  baidu:
+    ak: zwTcodWulkI8Pyj3zEbl74G0BuaovKEZ
+  shop:
+    address: 安徽省合肥市蜀山区潜山路470号

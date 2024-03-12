@@ -9,6 +9,8 @@ import com.sky.vo.SetmealVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.Map;
+
 /**
 * @author jiangwb
 * @description 针对表【setmeal(套餐)】的数据库操作Mapper
@@ -19,6 +21,8 @@ import org.apache.ibatis.annotations.Param;
 public interface SetmealMapper extends BaseMapper<Setmeal> {
 
     IPage pageQuery(IPage<SetmealVO> setmealVOPage,@Param("setmealPageQueryDTO") SetmealPageQueryDTO setmealPageQueryDTO);
+
+    Integer countByMap(Map map);
 }
 
 

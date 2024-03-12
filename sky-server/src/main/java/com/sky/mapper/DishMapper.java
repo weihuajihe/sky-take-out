@@ -11,6 +11,8 @@ import com.sky.vo.DishVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.Map;
+
 /**
 * @author jiangwb
 * @description 针对表【dish(菜品)】的数据库操作Mapper
@@ -21,6 +23,8 @@ import org.apache.ibatis.annotations.Param;
 public interface DishMapper extends BaseMapper<Dish> {
 
     IPage pageQuery(IPage<DishVO> dishVOPage, @Param("dishPageQueryDTO")DishPageQueryDTO dishPageQueryDTO);
+
+    Integer countByMap(Map map);
 }
 
 
